@@ -17,7 +17,7 @@ resource "aws_efs_mount_target" "this" {
   count = length(var.subnets)
 
   file_system_id = aws_efs_file_system.this.id
-  subnet_id      = element(var.subnets, count.index)
+  subnet_id = sort(var.subnets)[count.index]
   security_groups = [aws_security_group.mount_target.id]
 }
 
