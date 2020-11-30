@@ -5,7 +5,7 @@ variable "name" {
 
 variable "subnets" {
   description = "Subnets for mounting the EFS volume."
-  type        = string
+  type        = list
 }
 
 variable "vpc_id" {
