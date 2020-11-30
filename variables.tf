@@ -4,7 +4,7 @@ variable "name" {
 }
 
 variable "subnets" {
-  description = "Subnet for mounting the EFS volume. Preferably, an independent one."
+  description = "Subnets for mounting the EFS volume."
   type        = string
 }
 
